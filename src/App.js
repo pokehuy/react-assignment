@@ -4,19 +4,24 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import PostsPage from './pages/PostsPage';
 import ProfilePage from './pages/ProfilePage';
-import './App.css';
-//import {Navbar,Nav,Container} from 'react-bootstrap';
+import {Navbar,Nav,Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
+    <>
     <BrowserRouter>
     <div>
-      <nav>
-        <Link className='c' to='/'>Home</Link>
-        <Link className='c' to='/posts'>Posts</Link>
-        <Link className='c' to='/profile'>Profile</Link>
-        <Link className='c' to='/login'>Login</Link>
-      </nav>
+      <Navbar bg="primary" variant="dark">
+        <Container>
+        <Nav className="me-auto">
+          <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/posts">Posts</Nav.Link>
+          <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
+          <Nav.Link as={Link} to="/login">Login</Nav.Link>
+        </Nav>
+        </Container>
+      </Navbar>
     
         <Routes>
         <Route path="/" element={<HomePage />}/>
@@ -27,6 +32,7 @@ function App() {
     
     </div>
     </BrowserRouter>
+    </>
   );
 }
 

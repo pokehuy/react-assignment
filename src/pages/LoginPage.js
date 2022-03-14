@@ -45,11 +45,12 @@ const LoginPage = () => {
             method: "GET",
             url: `https://60dff0ba6b689e001788c858.mockapi.io/tokens`
         }).then(response => {
+            //localStorage.setItem("token", response.data.token);
+            //localStorage.setItem("userId", response.data.userId);
             localStorage.setItem("userToken", JSON.stringify(response.data));
             setLogIn(true);
             nav('/profile');
             window.location.reload();
-            console.log(response.data);
         })
     }
 
