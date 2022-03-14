@@ -82,7 +82,7 @@ const PostsPage = () => {
             setASC(!asc);
             setSort({sortById: true,sortByTitle: false});
         }
-        if (evt.target.title === "title") {
+        if (evt.target.id === "title") {
             setASC(!asc);
             setSort({sortById: false,sortByTitle: true});
         }
