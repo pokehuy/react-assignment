@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 const PostsPage = () => {
@@ -98,7 +99,8 @@ const PostsPage = () => {
                        placeholder="Search posts title"
                        onChange={evt => setSearchText(evt.target.value)}
                 />
-                <table>
+
+                <Table striped bordered hover>
                     <thead>
                     <tr>
                         <th
@@ -124,7 +126,7 @@ const PostsPage = () => {
                         </tr>
                     ))}
                     </tbody>
-                </table>
+                </Table>
             </div>
         </>
     )
