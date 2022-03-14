@@ -12,7 +12,7 @@ const PostsPage = () => {
         sortByTitle: false
     });
     const [asc, setASC] = useState(false);
-    const token = JSON.parse(localStorage.getItem('user')).token;
+    const token = JSON.parse(localStorage.getItem('user'))?.token;
 
     useEffect(() => {
         let didCancel = false;
